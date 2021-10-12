@@ -1,0 +1,459 @@
+Sub OpenCopyCloseWorkbook()
+  'Declare variable
+  Dim dmywithsym As String
+  dmywithsym = "10/01/2021"
+  Dim dmy As String
+  dmy = "01102021"
+  Dim rownumimport As String
+  rownumimport = "178"
+  
+  
+  Dim rowdateimport As String
+  rowdateimport = "B" & rownumimport
+  Dim exportwbname As String
+  exportwbname = "VPN and Internet usage update " & dmy & ".xlsx"
+  Dim exportwbpath As String
+  exportwbpath = "D:\chalermporn.k\Desktop\Ptt digital\Programming\Bandwidth Internet Graph\Data\" & exportwbname
+  Dim importwbname As String
+  importwbname = "Internet Bandwidth Graph.xlsm"
+  
+  
+  'Open
+  Workbooks.Open (exportwbpath)
+  
+  ''PTT''
+  Dim company As String
+  company = "PTT"
+  'Filled date in column B
+  Workbooks(importwbname).Worksheets(company).Range(rowdateimport).Value = dmywithsym
+  'Copy Inbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("C3").Copy
+  Workbooks(importwbname).Worksheets(company).Range("C" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("E3").Copy
+  Workbooks(importwbname).Worksheets(company).Range("D" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Inbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("G3").Copy
+  Workbooks(importwbname).Worksheets(company).Range("E" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("I3").Copy
+  Workbooks(importwbname).Worksheets(company).Range("F" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  
+  ''PTTEP''
+  company = "PTTEP"
+  'Filled date in column B
+  Workbooks(importwbname).Worksheets(company).Range(rowdateimport).Value = dmywithsym
+  'Copy Inbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("C4").Copy
+  Workbooks(importwbname).Worksheets(company).Range("C" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("E4").Copy
+  Workbooks(importwbname).Worksheets(company).Range("D" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Inbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("G4").Copy
+  Workbooks(importwbname).Worksheets(company).Range("E" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("I4").Copy
+  Workbooks(importwbname).Worksheets(company).Range("F" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  
+  ''OR''
+  company = "OR"
+  'Filled date in column B
+  Workbooks(importwbname).Worksheets(company).Range(rowdateimport).Value = dmywithsym
+  'Copy Inbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("C5").Copy
+  Workbooks(importwbname).Worksheets(company).Range("C" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("E5").Copy
+  Workbooks(importwbname).Worksheets(company).Range("D" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Inbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("G5").Copy
+  Workbooks(importwbname).Worksheets(company).Range("E" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("I5").Copy
+  Workbooks(importwbname).Worksheets(company).Range("F" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  
+  ''PTT Digital''
+  company = "PTT Digital"
+  'Filled date in column B
+  Workbooks(importwbname).Worksheets(company).Range(rowdateimport).Value = dmywithsym
+  'Copy Inbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("C6").Copy
+  Workbooks(importwbname).Worksheets(company).Range("C" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("E6").Copy
+  Workbooks(importwbname).Worksheets(company).Range("D" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Inbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("G6").Copy
+  Workbooks(importwbname).Worksheets(company).Range("E" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("I6").Copy
+  Workbooks(importwbname).Worksheets(company).Range("F" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  
+  ''BSA''
+  company = "BSA"
+  'Filled date in column B
+  Workbooks(importwbname).Worksheets(company).Range(rowdateimport).Value = dmywithsym
+  'Copy Inbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("C7").Copy
+  Workbooks(importwbname).Worksheets(company).Range("C" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("E7").Copy
+  Workbooks(importwbname).Worksheets(company).Range("D" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Inbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("G7").Copy
+  Workbooks(importwbname).Worksheets(company).Range("E" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("I7").Copy
+  Workbooks(importwbname).Worksheets(company).Range("F" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  
+  ''ENCO''
+  company = "ENCO"
+  'Filled date in column B
+  Workbooks(importwbname).Worksheets(company).Range(rowdateimport).Value = dmywithsym
+  'Copy Inbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("C8").Copy
+  Workbooks(importwbname).Worksheets(company).Range("C" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("E8").Copy
+  Workbooks(importwbname).Worksheets(company).Range("D" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Inbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("G8").Copy
+  Workbooks(importwbname).Worksheets(company).Range("E" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("I8").Copy
+  Workbooks(importwbname).Worksheets(company).Range("F" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  
+  ''GCL''
+  company = "GCL"
+  'Filled date in column B
+  Workbooks(importwbname).Worksheets(company).Range(rowdateimport).Value = dmywithsym
+  'Copy Inbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("C9").Copy
+  Workbooks(importwbname).Worksheets(company).Range("C" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("E9").Copy
+  Workbooks(importwbname).Worksheets(company).Range("D" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Inbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("G9").Copy
+  Workbooks(importwbname).Worksheets(company).Range("E" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("I9").Copy
+  Workbooks(importwbname).Worksheets(company).Range("F" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  
+  ''GCM''
+  company = "GCM"
+  'Filled date in column B
+  Workbooks(importwbname).Worksheets(company).Range(rowdateimport).Value = dmywithsym
+  'Copy Inbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("C10").Copy
+  Workbooks(importwbname).Worksheets(company).Range("C" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("E10").Copy
+  Workbooks(importwbname).Worksheets(company).Range("D" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Inbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("G10").Copy
+  Workbooks(importwbname).Worksheets(company).Range("E" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("I10").Copy
+  Workbooks(importwbname).Worksheets(company).Range("F" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  
+  ''GPSC''
+  company = "GPSC"
+  'Filled date in column B
+  Workbooks(importwbname).Worksheets(company).Range(rowdateimport).Value = dmywithsym
+  'Copy Inbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("C11").Copy
+  Workbooks(importwbname).Worksheets(company).Range("C" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("E11").Copy
+  Workbooks(importwbname).Worksheets(company).Range("D" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Inbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("G11").Copy
+  Workbooks(importwbname).Worksheets(company).Range("E" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("I11").Copy
+  Workbooks(importwbname).Worksheets(company).Range("F" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  
+  ''PTTER''
+  company = "PTTER"
+  'Filled date in column B
+  Workbooks(importwbname).Worksheets(company).Range(rowdateimport).Value = dmywithsym
+  'Copy Inbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("C12").Copy
+  Workbooks(importwbname).Worksheets(company).Range("C" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("E12").Copy
+  Workbooks(importwbname).Worksheets(company).Range("D" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Inbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("G12").Copy
+  Workbooks(importwbname).Worksheets(company).Range("E" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("I12").Copy
+  Workbooks(importwbname).Worksheets(company).Range("F" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  
+  ''PTTES''
+  company = "PTTES"
+  'Filled date in column B
+  Workbooks(importwbname).Worksheets(company).Range(rowdateimport).Value = dmywithsym
+  'Copy Inbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("C13").Copy
+  Workbooks(importwbname).Worksheets(company).Range("C" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("E13").Copy
+  Workbooks(importwbname).Worksheets(company).Range("D" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Inbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("G13").Copy
+  Workbooks(importwbname).Worksheets(company).Range("E" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("I13").Copy
+  Workbooks(importwbname).Worksheets(company).Range("F" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  
+  ''PTTGE''
+  company = "PTTGE"
+  'Filled date in column B
+  Workbooks(importwbname).Worksheets(company).Range(rowdateimport).Value = dmywithsym
+  'Copy Inbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("C14").Copy
+  Workbooks(importwbname).Worksheets(company).Range("C" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("E14").Copy
+  Workbooks(importwbname).Worksheets(company).Range("D" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Inbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("G14").Copy
+  Workbooks(importwbname).Worksheets(company).Range("E" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("I14").Copy
+  Workbooks(importwbname).Worksheets(company).Range("F" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  
+  ''PTTNGD''
+  company = "PTTNGD"
+  'Filled date in column B
+  Workbooks(importwbname).Worksheets(company).Range(rowdateimport).Value = dmywithsym
+  'Copy Inbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("C15").Copy
+  Workbooks(importwbname).Worksheets(company).Range("C" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("E15").Copy
+  Workbooks(importwbname).Worksheets(company).Range("D" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Inbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("G15").Copy
+  Workbooks(importwbname).Worksheets(company).Range("E" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("I15").Copy
+  Workbooks(importwbname).Worksheets(company).Range("F" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  
+  ''PTTAC''
+  company = "PTTAC"
+  'Filled date in column B
+  Workbooks(importwbname).Worksheets(company).Range(rowdateimport).Value = dmywithsym
+  'Copy Inbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("C16").Copy
+  Workbooks(importwbname).Worksheets(company).Range("C" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("E16").Copy
+  Workbooks(importwbname).Worksheets(company).Range("D" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Inbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("G16").Copy
+  Workbooks(importwbname).Worksheets(company).Range("E" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("I16").Copy
+  Workbooks(importwbname).Worksheets(company).Range("F" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  
+  ''PTTGL''
+  company = "PTTGL"
+  'Filled date in column B
+  Workbooks(importwbname).Worksheets(company).Range(rowdateimport).Value = dmywithsym
+  'Copy Inbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("C17").Copy
+  Workbooks(importwbname).Worksheets(company).Range("C" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("E17").Copy
+  Workbooks(importwbname).Worksheets(company).Range("D" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Inbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("G17").Copy
+  Workbooks(importwbname).Worksheets(company).Range("E" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("I17").Copy
+  Workbooks(importwbname).Worksheets(company).Range("F" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  
+  ''PTTLNG''
+  company = "PTTLNG"
+  'Filled date in column B
+  Workbooks(importwbname).Worksheets(company).Range(rowdateimport).Value = dmywithsym
+  'Copy Inbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("C18").Copy
+  Workbooks(importwbname).Worksheets(company).Range("C" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("E18").Copy
+  Workbooks(importwbname).Worksheets(company).Range("D" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Inbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("G18").Copy
+  Workbooks(importwbname).Worksheets(company).Range("E" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("I18").Copy
+  Workbooks(importwbname).Worksheets(company).Range("F" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  
+  ''PTTMCC''
+  company = "PTTMCC"
+  'Filled date in column B
+  Workbooks(importwbname).Worksheets(company).Range(rowdateimport).Value = dmywithsym
+  'Copy Inbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("C19").Copy
+  Workbooks(importwbname).Worksheets(company).Range("C" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("E19").Copy
+  Workbooks(importwbname).Worksheets(company).Range("D" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Inbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("G19").Copy
+  Workbooks(importwbname).Worksheets(company).Range("E" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("I19").Copy
+  Workbooks(importwbname).Worksheets(company).Range("F" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  
+  ''PTTTANK''
+  company = "PTTTANK"
+  'Filled date in column B
+  Workbooks(importwbname).Worksheets(company).Range(rowdateimport).Value = dmywithsym
+  'Copy Inbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("C20").Copy
+  Workbooks(importwbname).Worksheets(company).Range("C" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("E20").Copy
+  Workbooks(importwbname).Worksheets(company).Range("D" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Inbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("G20").Copy
+  Workbooks(importwbname).Worksheets(company).Range("E" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("I20").Copy
+  Workbooks(importwbname).Worksheets(company).Range("F" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  
+  ''PTTTCC''
+  company = "PTTTCC"
+  'Filled date in column B
+  Workbooks(importwbname).Worksheets(company).Range(rowdateimport).Value = dmywithsym
+  'Copy Inbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("C21").Copy
+  Workbooks(importwbname).Worksheets(company).Range("C" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("E21").Copy
+  Workbooks(importwbname).Worksheets(company).Range("D" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Inbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("G21").Copy
+  Workbooks(importwbname).Worksheets(company).Range("E" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("I21").Copy
+  Workbooks(importwbname).Worksheets(company).Range("F" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  
+  ''GC''
+  company = "GC"
+  'Filled date in column B
+  Workbooks(importwbname).Worksheets(company).Range(rowdateimport).Value = dmywithsym
+  'Copy Inbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("C22").Copy
+  Workbooks(importwbname).Worksheets(company).Range("C" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("E22").Copy
+  Workbooks(importwbname).Worksheets(company).Range("D" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Inbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("G22").Copy
+  Workbooks(importwbname).Worksheets(company).Range("E" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("I22").Copy
+  Workbooks(importwbname).Worksheets(company).Range("F" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  
+  ''TOP''
+  company = "TOP"
+  'Filled date in column B
+  Workbooks(importwbname).Worksheets(company).Range(rowdateimport).Value = dmywithsym
+  'Copy Inbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("C23").Copy
+  Workbooks(importwbname).Worksheets(company).Range("C" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("E23").Copy
+  Workbooks(importwbname).Worksheets(company).Range("D" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Inbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("G23").Copy
+  Workbooks(importwbname).Worksheets(company).Range("E" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("I23").Copy
+  Workbooks(importwbname).Worksheets(company).Range("F" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  
+  ''PTTT''
+  company = "PTTT"
+  'Filled date in column B
+  Workbooks(importwbname).Worksheets(company).Range(rowdateimport).Value = dmywithsym
+  'Copy Inbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("C24").Copy
+  Workbooks(importwbname).Worksheets(company).Range("C" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("E24").Copy
+  Workbooks(importwbname).Worksheets(company).Range("D" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Inbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("G24").Copy
+  Workbooks(importwbname).Worksheets(company).Range("E" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("I24").Copy
+  Workbooks(importwbname).Worksheets(company).Range("F" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  
+  ''TLBC''
+  company = "TLBC"
+  'Filled date in column B
+  Workbooks(importwbname).Worksheets(company).Range(rowdateimport).Value = dmywithsym
+  'Copy Inbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("C25").Copy
+  Workbooks(importwbname).Worksheets(company).Range("C" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("E25").Copy
+  Workbooks(importwbname).Worksheets(company).Range("D" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Inbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("G25").Copy
+  Workbooks(importwbname).Worksheets(company).Range("E" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("I25").Copy
+  Workbooks(importwbname).Worksheets(company).Range("F" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  
+  ''BPS''
+  company = "BPS"
+  'Filled date in column B
+  Workbooks(importwbname).Worksheets(company).Range(rowdateimport).Value = dmywithsym
+  'Copy Inbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("C26").Copy
+  Workbooks(importwbname).Worksheets(company).Range("C" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("E26").Copy
+  Workbooks(importwbname).Worksheets(company).Range("D" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Inbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("G26").Copy
+  Workbooks(importwbname).Worksheets(company).Range("E" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("I26").Copy
+  Workbooks(importwbname).Worksheets(company).Range("F" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  
+  ''PTTRM''
+  company = "PTTRM"
+  'Filled date in column B
+  Workbooks(importwbname).Worksheets(company).Range(rowdateimport).Value = dmywithsym
+  'Copy Inbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("C27").Copy
+  Workbooks(importwbname).Worksheets(company).Range("C" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound Domestic
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("E27").Copy
+  Workbooks(importwbname).Worksheets(company).Range("D" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Inbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("G27").Copy
+  Workbooks(importwbname).Worksheets(company).Range("E" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  'Copy Outbound International
+  Workbooks(exportwbname).Worksheets("Internet (8.00-17.00)").Range("I27").Copy
+  Workbooks(importwbname).Worksheets(company).Range("F" & rownumimport).PasteSpecial Paste:=xlPasteValues
+  
+  'Close
+  Workbooks(exportwbname).Close SaveChanges:=False
+  
+  
+  
+
+End Sub
+
+
+
